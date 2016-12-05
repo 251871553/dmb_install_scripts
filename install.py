@@ -117,6 +117,15 @@ class dmb_terminal(public):
              self.unzip(terminal_zip ,'/data/agent/')
              print  'install   ESCTerminal       \033[32m[OK]\033[0m.'
 
+          #install_graceful
+          if os.path.exists('/data/agent/Graceful'):
+             print  'check   /data/agent/Graceful             \033[32m[OK]\033[0m.'
+          else:
+             Graceful_zip='/tmp/Graceful.zip'
+             self.unzip(Graceful_zip ,'/data/agent/')
+             print  'install   Graceful          \033[32m[OK]\033[0m.'
+
+
           self.shell('chown app.app  /data/agent/  -R')
           self.shell('chmod  755  /data/agent/  -R')
       def modify(self):

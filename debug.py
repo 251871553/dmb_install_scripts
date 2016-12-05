@@ -3,6 +3,16 @@
 import paramiko
 import user_conf
 import multiprocessing
+import logging  
+
+
+
+#logging.basicConfig(level=logging.DEBUG,  
+logging.basicConfig(level=logging.INFO,  
+                    format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',  
+                    datefmt='%a, %d %b %Y %H:%M:%S',  
+                    filename='dmb_debug.log',  
+                    filemode='w')  
 
 def  sftp(hostname,localpath,remotepath):
        t = paramiko.Transport((hostname,22))
@@ -43,3 +53,4 @@ for  k,v in result.items():
      print 'number %s machine output:\n ' %number
      for content in  v.get():
          print content
+         logging.info(content)

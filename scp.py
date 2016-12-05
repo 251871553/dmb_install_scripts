@@ -35,7 +35,7 @@ def trans(scp_list):
     print  'done'
 
 if user_conf.install_env == 'dmb_agent':    
-    scp_list=['install.py' ,'user_conf.py','ESCAgent.zip','ESCTerminal.zip','SmartMOM.zip' ]   
+    scp_list=['install.py' ,'user_conf.py','ESCAgent.zip','ESCTerminal.zip','SmartMOM.zip','Graceful.zip' ]   
     trans(scp_list)
 elif user_conf.install_env == 'dmb_gov':
     scp_list=['install.py' ,'user_conf.py','ESCGovern.zip','GOVManager.zip' ]   
